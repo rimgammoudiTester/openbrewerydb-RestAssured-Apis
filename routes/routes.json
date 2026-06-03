@@ -1,0 +1,5 @@
+{
+  "breweries": "/v1/breweries",
+  "metaEndpoint": "/meta",
+  "randomEndpoint": "/random"
+}
