@@ -1,0 +1,5 @@
+<suite name="suiteBreweryDb">
+    <test name="breweryesTests">
+        <class name="apiTests.breweries.BreweriesTests"/>
+    </test>
+</suite>
