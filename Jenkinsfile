@@ -17,7 +17,7 @@ stages{
   {
   steps{
        echo 'Tests breweries are running'
-       sh 'mvn test -Dsurefire.suiteXmlFiles=suites/suite.xml'
+       sh 'mvn test -Dtest=BreweriesTests'
 
 
   }}
