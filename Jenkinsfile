@@ -7,13 +7,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'The build is done successfully'
-                sh 'mvn clean'
+                bat 'mvn clean'
             }
         }
         stage('Test') {
             steps {
                 echo 'Tests breweries are running'
-                sh 'mvn test -DsuiteXmlFile=suites/suite.xml'
+                bat 'mvn test -DsuiteXmlFile=suites/suite.xml'
             }
         }
         stage('Deploy') {
