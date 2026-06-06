@@ -1,19 +1,20 @@
 pipeline {
-    agent any
+    agent {label 'AWS'}
     tools {
-        maven 'maven'
+        jdk 'jdk 21'
+        maven 'Maven-3.9.16'
     }
     stages {
         stage('Build') {
             steps {
                 echo 'The build is done successfully'
-                bat 'mvn clean'
+                sh 'mvn clean compile'
             }
         }
         stage('Test') {
             steps {
                 echo 'Tests breweries are running'
-                bat 'mvn test -DsuiteXmlFile=suites/suite.xml'
+                sh 'mvn test -DsuiteXmlFile=suites/suite.xml'
             }
         }
         stage('Deploy') {
