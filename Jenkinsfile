@@ -1,7 +1,7 @@
 pipeline {
     agent {label 'AWS'}
     tools {
-        jdk 'jdk 21'
+        jdk 'jdk'
         maven 'Maven-3.9.16'
     }
     stages {
